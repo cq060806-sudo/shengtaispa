@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>认证技师</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,sans-serif;background:#0d0d0d;color:#f0f0f0;min-height:100vh;padding:12px}
+h1{font-size:22px;text-align:center;padding:12px 0;background:linear-gradient(90deg,#ff6b9d,#c44dff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{text-align:center;color:#888;font-size:13px;margin-bottom:16px}
+.filter-section{margin-bottom:12px}
+.filter-section h4{color:#aaa;font-size:12px;margin:8px 0 4px;padding-left:4px}
+.filter-list{display:flex;flex-wrap:wrap;gap:6px}
+.filter-btn{background:#1a1a1a;border:1px solid #333;color:#ccc;padding:6px 14px;border-radius:20px;font-size:12px;cursor:pointer;transition:all .3s}
+.filter-btn.active,.filter-btn:hover{background:linear-gradient(135deg,#ff6b9d,#c44dff);color:#fff;border-color:transparent}
+grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#1a1a1a;border-radius:14px;padding:12px;transition:transform .2s;display:flex;flex-direction:column}
+.card.hide{display:none}
+.avatar{width:100%;aspect-ratio:1;border-radius:10px;object-fit:cover;background:#2C2C2C;margin-bottom:8px}
+.card h3{font-size:16px;display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.status{font-size:10px;padding:2px 6px;border-radius:8px;background:#333;color:#aaa}
+.status.online{background:#1a3a1a;color:#4ade80}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.tag{font-size:10px;padding:3px 8px;border-radius:10px;background:#252525;color:#aaa}
+.tag.city{background:#1a2a3a;color:#60a5fa}
+.tag.type{background:#2a1a3a;color:#c084fc}
+.bio{font-size:11px;color:#888;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:13px;color:#f59e0b;margin-top:auto;margin-bottom:8px}
+.contact-btn{display:block;text-align:center;padding:8px;border-radius:10px;background:linear-gradient(135deg,#ff6b9d,#c44dff);color:#fff;text-decoration:none;font-size:13px;font-weight:600}
+.footer{text-align:center;padding:20px;color:#555;font-size:11px}
+</style></head>
+<body>
+<h1>认证技师</h1>
+<p class="subtitle">全国上门 · 认证技师 · 安全可靠</p>
+<div class="filter-section"><h4>🏙 城市</h4><div class="filter-list"><button class="filter-btn active" data-city="">全部</button><button class="filter-btn" data-city="长沙">长沙</button><button class="filter-btn" data-city="成都">成都</button><button class="filter-btn" data-city="北京">北京</button><button class="filter-btn" data-city="上海">上海</button></div></div>
+<div class="filter-section"><h4>💪 类型</h4><div class="filter-list"><button class="filter-btn active" data-type="">全部</button><button class="filter-btn" data-type="健壮型">健壮型</button><button class="filter-btn" data-type="力量型">力量型</button><button class="filter-btn" data-type="清秀型">清秀型</button><button class="filter-btn" data-type="阳光型">阳光型</button></div></div>
+<grid>
+    <div class="card" data-city="长沙" data-type="健壮型">
+      <img src="https://placehold.co/200x200/2C2C2C/FFF?text=%E4%B9%9D%E5%B1%80" class="avatar" alt="九局">
+      <h3>九局 <span class="status online">在线</span></h3>
+      <p class="tags">
+        <span class="tag city">长沙</span>
+        <span class="tag type">健壮型</span>
+        <span class="tag style">幽默型/热情型</span>
+      </p>
+      <p class="bio">沟通能力强，幽默风趣，可狼可奶，本人比照片帅</p>
+      <p class="price">咨询客服</p>
+      <a href="#" class="contact-btn" onclick="alert('请添加企业微信客服：\n[你的微信号]\n\n告知客服想要的技师昵称，会为你安排');return false;">联系客服预约</a>
+    </div>
+    <div class="card" data-city="成都" data-type="力量型">
+      <img src="https://placehold.co/200x200/2C2C2C/FFF?text=%E5%B0%8F%E9%BE%99" class="avatar" alt="小龙">
+      <h3>小龙 <span class="status online">在线</span></h3>
+      <p class="tags">
+        <span class="tag city">成都</span>
+        <span class="tag type">力量型</span>
+        <span class="tag style">高冷型/细腻型</span>
+      </p>
+      <p class="bio">身材健硕，专业技能扎实，注重细节，服务到位</p>
+      <p class="price">咨询客服</p>
+      <a href="#" class="contact-btn" onclick="alert('请添加企业微信客服：\n[你的微信号]\n\n告知客服想要的技师昵称，会为你安排');return false;">联系客服预约</a>
+    </div>
+    <div class="card" data-city="北京" data-type="清秀型">
+      <img src="https://placehold.co/200x200/2C2C2C/FFF?text=%E5%AE%87%E5%AE%99" class="avatar" alt="宇宙">
+      <h3>宇宙 <span class="status online">在线</span></h3>
+      <p class="tags">
+        <span class="tag city">北京</span>
+        <span class="tag type">清秀型</span>
+        <span class="tag style">温柔型/热情型</span>
+      </p>
+      <p class="bio">外形清秀，性格温柔，手法细腻，体验感极佳</p>
+      <p class="price">咨询客服</p>
+      <a href="#" class="contact-btn" onclick="alert('请添加企业微信客服：\n[你的微信号]\n\n告知客服想要的技师昵称，会为你安排');return false;">联系客服预约</a>
+    </div>
+    <div class="card" data-city="上海" data-type="阳光型">
+      <img src="https://placehold.co/200x200/2C2C2C/FFF?text=%E9%93%B6%E6%B2%B3" class="avatar" alt="银河">
+      <h3>银河 <span class="status online">在线</span></h3>
+      <p class="tags">
+        <span class="tag city">上海</span>
+        <span class="tag type">阳光型</span>
+        <span class="tag style">幽默型/狂野型</span>
+      </p>
+      <p class="bio">阳光开朗，热情大方，服务专业，氛围感强</p>
+      <p class="price">咨询客服</p>
+      <a href="#" class="contact-btn" onclick="alert('请添加企业微信客服：\n[你的微信号]\n\n告知客服想要的技师昵称，会为你安排');return false;">联系客服预约</a>
+    </div>
+    <div class="card" data-city="长沙" data-type="力量型">
+      <img src="https://placehold.co/200x200/2C2C2C/FFF?text=%E9%9B%B7%E7%94%B5" class="avatar" alt="雷电">
+      <h3>雷电 <span class="status online">在线</span></h3>
+      <p class="tags">
+        <span class="tag city">长沙</span>
+        <span class="tag type">力量型</span>
+        <span class="tag style">霸道型/热情型</span>
+      </p>
+      <p class="bio">气场全开，技术过硬，力度恰到好处</p>
+      <p class="price">咨询客服</p>
+      <a href="#" class="contact-btn" onclick="alert('请添加企业微信客服：\n[你的微信号]\n\n告知客服想要的技师昵称，会为你安排');return false;">联系客服预约</a>
+    </div>
+    <div class="card" data-city="成都" data-type="清秀型">
+      <img src="https://placehold.co/200x200/2C2C2C/FFF?text=%E5%86%B0%E5%B7%9D" class="avatar" alt="冰川">
+      <h3>冰川 <span class="status online">在线</span></h3>
+      <p class="tags">
+        <span class="tag city">成都</span>
+        <span class="tag type">清秀型</span>
+        <span class="tag style">高冷型/细腻型</span>
+      </p>
+      <p class="bio">高颜值，高冷范儿，手法专业，服务周到</p>
+      <p class="price">咨询客服</p>
+      <a href="#" class="contact-btn" onclick="alert('请添加企业微信客服：\n[你的微信号]\n\n告知客服想要的技师昵称，会为你安排');return false;">联系客服预约</a>
+    </div>
+</grid>
+<div class="footer">预约请添加企业微信客服 · 告知技师昵称即可<br>服务时间 10:00-02:00</div>
+<script>
+document.addEventListener('click',e=>{
+  const btn=e.target.closest('.filter-btn');if(!btn)return;
+  btn.parentElement.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const city=document.querySelector('[data-city].active')?.dataset.city||'';
+  const type=document.querySelector('[data-type].active')?.dataset.type||'';
+  document.querySelectorAll('.card').forEach(c=>{
+    const matchCity=!city||c.dataset.city===city;
+    const matchType=!type||c.dataset.type===type;
+    c.classList.toggle('hide',!(matchCity&&matchType));
+  });
+});
+</script>
+</body></html>
